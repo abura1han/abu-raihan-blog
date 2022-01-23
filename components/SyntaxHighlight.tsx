@@ -1,0 +1,36 @@
+import React from "react";
+import {
+  Prism as SyntaxHighlighter,
+  SyntaxHighlighterProps,
+} from "react-syntax-highlighter";
+import { dracula } from "react-syntax-highlighter/dist/cjs/styles/prism";
+
+// Syntax highlighter
+const SyntaxHighlight = {
+  code({
+    node,
+    inline,
+    className,
+    children,
+    ...props
+  }: SyntaxHighlighterProps) {
+    const match = /language-(\w+)/.exec(className || "");
+
+    return !inline && match ? (
+      <SyntaxHighlighter
+        style={dracula}
+        language={match[1]}
+        PreTag="div"
+        {...props}
+      >
+        {String(children).replace(/\n$/, "")}
+      </SyntaxHighlighter>
+    ) : (
+      <code className={className} {...props}>
+        {children}
+      </code>
+    );
+  },
+};
+
+export default SyntaxHighlight;

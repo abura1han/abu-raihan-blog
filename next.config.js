@@ -5,8 +5,8 @@ module.exports = {
     domains: ["res.cloudinary.com"],
   },
   env: {
-    DB_USER: "aburaihan",
-    DB_PASS: "C9d5wM0BeahgOHJE",
+    DB_USER: "your_db_user",
+    DB_PASS: "your_db_user_pass",
     site_url: "http://localhost:3000/",
     api_url: "http://localhost:3000/api/",
     user_url: "http://localhost:3000/api/users",
@@ -17,10 +17,10 @@ module.exports = {
 
     login_url: "http://localhost:3000/api/login",
     access_token_secret:
-      "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJhdWJyYTFoYW4iLCJuYW1lIjoiQWJ1IFJhMWhhbiIsImlhdCI6MTUxNjIzOTAyMn0.7MP1IMULEdV1ekRiKvF_uBh5F6XI2iSV7dVm80AozBQ",
+      "your_access_token_secret",
 
-    cloudinary_name: "abu-raihan",
-    cloudinary_api_key: "119984673713254",
-    cloudinary_api_secret: "yXYus9pRkAwupztYksYTFm6Ealw",
+    cloudinary_name: "your_cloud_user_name",
+    cloudinary_api_key: "your_cloud_api_key",
+    cloudinary_api_secret: "your_cloud_api_secret",
   },
 };
